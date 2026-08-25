@@ -1,0 +1,25 @@
+{
+  "schema_version": "cyrisk.scenarios/v1",
+  "corpus_id": "cyrisk_synthetic_corpus",
+  "manifest_hash": "461b721a3330e4cc0e03f581d896bfaceba4d2cc460ead690548802a4524eb3e",
+  "positive_results": [
+    {
+      "case_id": "case_service",
+      "input_hash": "4c18eb1d97fa9fc1d8b5bb81ce4e988955319499d3bc6f3eeba436e059af0792",
+      "output_hash": "460669a73efe9881cd470e2d7001888bd76c9299364329e698609ee63fb5f32c",
+      "run_id": "run-0ae50ac637843bde",
+      "limitation": "This fictional case is a deterministic compatibility check, not an exposure statement."
+    }
+  ],
+  "adversarial_results": [
+    {
+      "case_id": "case_currency_adversarial",
+      "rejection_code": "currency_or_unknown_unit_forbidden"
+    },
+    {
+      "case_id": "case_source_adversarial",
+      "rejection_code": "non_synthetic_source_forbidden"
+    }
+  ],
+  "limitation": "Corpus outputs prove only deterministic compatibility of sealed fictional fixtures; they do not forecast, estimate loss, validate evidence, establish control effect, or make a decision."
+}

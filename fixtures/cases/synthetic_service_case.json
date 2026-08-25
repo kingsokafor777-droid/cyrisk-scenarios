@@ -1,0 +1,82 @@
+{
+  "case_id": "case_service",
+  "expected_input_hash": "4c18eb1d97fa9fc1d8b5bb81ce4e988955319499d3bc6f3eeba436e059af0792",
+  "expected_output_hash": "460669a73efe9881cd470e2d7001888bd76c9299364329e698609ee63fb5f32c",
+  "expected_rejection": null,
+  "expected_run_id": "run-0ae50ac637843bde",
+  "limitation": "This fictional case is a deterministic compatibility check, not an exposure statement.",
+  "model_request": {
+    "completeness_status": "complete",
+    "deterministic_seed": 17,
+    "frequency_factor_id": "event_frequency",
+    "limitations": "Synthetic fixture only; not a forecast, estimate, or real-world observation.",
+    "loss_factor_ids": [
+      "impact_index"
+    ],
+    "model_version": "0.1.0",
+    "request_id": "request_service",
+    "sample_count": 100
+  },
+  "scenario": {
+    "asset_id": "asset_service",
+    "completeness_note": "Complete only for this sealed fictional regression exercise.",
+    "evidence_references": [
+      {
+        "description": "Fictional payload-free reference for the sealed regression fixture.",
+        "evidence_id": "evidence_input",
+        "expires_on": null,
+        "integrity_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "schema_version": "1.0",
+        "source_class": "synthetic"
+      }
+    ],
+    "factors": [
+      {
+        "central": "2",
+        "confidence": "medium",
+        "distribution": "triangular",
+        "factor_id": "event_frequency",
+        "lower": "1",
+        "metric": "Fictional recurrence input",
+        "rationale": "Fictional bounded input for deterministic regression only.",
+        "schema_version": "1.0",
+        "source_class": "synthetic",
+        "unit": "events-per-year",
+        "upper": "3"
+      },
+      {
+        "central": "15",
+        "confidence": "low",
+        "distribution": "pert",
+        "factor_id": "impact_index",
+        "lower": "10",
+        "metric": "Fictional index input",
+        "rationale": "Fictional index range with no financial or real-world interpretation.",
+        "schema_version": "1.0",
+        "source_class": "synthetic",
+        "unit": "synthetic-index-units",
+        "upper": "20"
+      }
+    ],
+    "loss_components": [
+      {
+        "component_id": "component_index",
+        "factor_ids": [
+          "impact_index"
+        ],
+        "label": "Fictional index component",
+        "rationale": "Fictional component retained solely to exercise the Core contract.",
+        "schema_version": "1.0",
+        "unit": "synthetic-index-units"
+      }
+    ],
+    "loss_unit": "synthetic-index-units",
+    "scenario_id": "scenario_service",
+    "schema_version": "1.0",
+    "source_class": "synthetic",
+    "threat_event": "Fictional synthetic input exercise",
+    "title": "Fictional service configuration variation"
+  },
+  "schema_version": "cyrisk.scenarios/v1",
+  "title": "Fictional service configuration exercise"
+}

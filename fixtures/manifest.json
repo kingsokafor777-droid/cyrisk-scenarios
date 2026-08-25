@@ -1,0 +1,24 @@
+{
+  "core_commit": "4d68f385ef382a6420466dff0196244a2c915f1f",
+  "corpus_id": "cyrisk_synthetic_corpus",
+  "entries": [
+    {
+      "case_id": "case_currency_adversarial",
+      "kind": "adversarial",
+      "relative_path": "adversarial/currency_unit.json"
+    },
+    {
+      "case_id": "case_service",
+      "kind": "positive",
+      "relative_path": "cases/synthetic_service_case.json"
+    },
+    {
+      "case_id": "case_source_adversarial",
+      "kind": "adversarial",
+      "relative_path": "adversarial/non_synthetic_source.json"
+    }
+  ],
+  "manifest_hash": "461b721a3330e4cc0e03f581d896bfaceba4d2cc460ead690548802a4524eb3e",
+  "model_commit": "47c8957e61ce66cdc455a1582429207f211cd802",
+  "schema_version": "cyrisk.scenarios/v1"
+}

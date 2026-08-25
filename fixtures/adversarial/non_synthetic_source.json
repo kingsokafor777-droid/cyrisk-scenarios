@@ -1,0 +1,78 @@
+{
+  "schema_version": "cyrisk.scenarios/v1",
+  "case_id": "case_source_adversarial",
+  "title": "Fictional non-synthetic source rejection case",
+  "scenario": {
+    "schema_version": "1.0",
+    "scenario_id": "scenario_source_adversarial",
+    "title": "Fictional source-class boundary case",
+    "asset_id": "asset_source_adversarial",
+    "threat_event": "Fictional boundary exercise",
+    "loss_unit": "synthetic-index-units",
+    "source_class": "supplied",
+    "factors": [
+      {
+        "schema_version": "1.0",
+        "factor_id": "event_frequency",
+        "metric": "Fictional recurrence input",
+        "unit": "events-per-year",
+        "distribution": "uniform",
+        "lower": "1",
+        "central": "2",
+        "upper": "3",
+        "source_class": "supplied",
+        "confidence": "unknown",
+        "rationale": "Deliberately unsuitable source class for corpus acceptance."
+      },
+      {
+        "schema_version": "1.0",
+        "factor_id": "impact_index",
+        "metric": "Fictional index input",
+        "unit": "synthetic-index-units",
+        "distribution": "uniform",
+        "lower": "10",
+        "central": "15",
+        "upper": "20",
+        "source_class": "supplied",
+        "confidence": "unknown",
+        "rationale": "Deliberately unsuitable source class for corpus acceptance."
+      }
+    ],
+    "loss_components": [
+      {
+        "schema_version": "1.0",
+        "component_id": "component_index",
+        "label": "Fictional index component",
+        "unit": "synthetic-index-units",
+        "factor_ids": ["impact_index"],
+        "rationale": "Fictional component for a negative test only."
+      }
+    ],
+    "evidence_references": [
+      {
+        "schema_version": "1.0",
+        "evidence_id": "evidence_source_adversarial",
+        "source_class": "supplied",
+        "integrity_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "description": "Fictional unsuitable reference for a negative test only.",
+        "expires_on": null
+      }
+    ],
+    "completeness_note": "This input must be rejected because it is not synthetic."
+  },
+  "model_request": {
+    "request_id": "request_source_adversarial",
+    "frequency_factor_id": "event_frequency",
+    "loss_factor_ids": ["impact_index"],
+    "deterministic_seed": 18,
+    "sample_count": 100,
+    "model_version": "0.1.0",
+    "completeness_status": "complete",
+    "limitations": "Negative fixture only; no model run may be performed."
+  },
+  "expected_input_hash": null,
+  "expected_output_hash": null,
+  "expected_run_id": null,
+  "expected_rejection": "non_synthetic_source_forbidden",
+  "limitation": "This fictitious adversarial case proves only a source-class rejection boundary."
+}

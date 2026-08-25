@@ -1,0 +1,78 @@
+{
+  "schema_version": "cyrisk.scenarios/v1",
+  "case_id": "case_currency_adversarial",
+  "title": "Fictional currency-unit rejection case",
+  "scenario": {
+    "schema_version": "1.0",
+    "scenario_id": "scenario_currency_adversarial",
+    "title": "Fictional currency boundary case",
+    "asset_id": "asset_currency_adversarial",
+    "threat_event": "Fictional boundary exercise",
+    "loss_unit": "usd",
+    "source_class": "synthetic",
+    "factors": [
+      {
+        "schema_version": "1.0",
+        "factor_id": "event_frequency",
+        "metric": "Fictional recurrence input",
+        "unit": "events-per-year",
+        "distribution": "uniform",
+        "lower": "1",
+        "central": "2",
+        "upper": "3",
+        "source_class": "synthetic",
+        "confidence": "unknown",
+        "rationale": "Fictional negative test frequency input."
+      },
+      {
+        "schema_version": "1.0",
+        "factor_id": "impact_currency",
+        "metric": "Fictional prohibited unit input",
+        "unit": "usd",
+        "distribution": "uniform",
+        "lower": "10",
+        "central": "15",
+        "upper": "20",
+        "source_class": "synthetic",
+        "confidence": "unknown",
+        "rationale": "Deliberately prohibited currency unit for corpus acceptance."
+      }
+    ],
+    "loss_components": [
+      {
+        "schema_version": "1.0",
+        "component_id": "component_currency",
+        "label": "Fictional prohibited-unit component",
+        "unit": "usd",
+        "factor_ids": ["impact_currency"],
+        "rationale": "Fictional component for a negative test only."
+      }
+    ],
+    "evidence_references": [
+      {
+        "schema_version": "1.0",
+        "evidence_id": "evidence_currency_adversarial",
+        "source_class": "synthetic",
+        "integrity_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "description": "Fictional reference for the prohibited-unit negative test.",
+        "expires_on": null
+      }
+    ],
+    "completeness_note": "This input must be rejected because it uses a currency label."
+  },
+  "model_request": {
+    "request_id": "request_currency_adversarial",
+    "frequency_factor_id": "event_frequency",
+    "loss_factor_ids": ["impact_currency"],
+    "deterministic_seed": 19,
+    "sample_count": 100,
+    "model_version": "0.1.0",
+    "completeness_status": "complete",
+    "limitations": "Negative fixture only; no model run may be performed."
+  },
+  "expected_input_hash": null,
+  "expected_output_hash": null,
+  "expected_run_id": null,
+  "expected_rejection": "currency_or_unknown_unit_forbidden",
+  "limitation": "This fictitious adversarial case proves only a unit-boundary rejection."
+}
